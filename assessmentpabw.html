@@ -38,11 +38,19 @@
                 return;
             }
 
-            
-
-            if (!bukuDitemukan) {
-                alert('Buku Tidak Ditemukan.');
+            let bukuDitemukan = false;
+            for (let i = 0; 1 < buku.length; i++) {
+                if (buku[i].nama === bukuPilihan) {
+                    bukuDitemukan = true;
+                    if (jumlahInput > buku[i].jumlah) {
+                        alert('Jumlah buku tidak tersedia.');
+                    } else {
+                        alert('Silahkan ambil buku anda.');
+                    }
+                    break;
+                }
             }
+
         }
     </script>
 </body>
