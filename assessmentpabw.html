@@ -29,7 +29,21 @@
             { "nama": "aladin", "jumlah": 2}
         ];
 
-        
+        function checkPeminjaman() {
+            let jumlahInput = parseInt(document.getElementById('jumlah').value);
+            let bukuPilihan = document.getElementById('buku').value;
+
+            if (isNaN(jumlahInput) || jumlahInput === 0) {
+                alert('Masukkan jumlah buku yang valid.');
+                return;
+            }
+
+            
+
+            if (!bukuDitemukan) {
+                alert('Buku Tidak Ditemukan.');
+            }
+        }
     </script>
 </body>
 </html>
